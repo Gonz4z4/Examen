@@ -1,3 +1,4 @@
+package com.mycompany.examen1;
 
 import java.util.Date;
 
@@ -17,6 +18,8 @@ class Trayecto {
     private String pais;
     private String ciudad;
     private Date fecha;
+
+    private int codigo;
 
     public Trayecto(String pais, String ciudad) {
         this.vendidos = 0;
@@ -51,5 +54,9 @@ class Trayecto {
     
     public void incrementarVendidos(){
         this.vendidos++;
+    }
+
+    public double calcularPrecio(double precio, int codigo){
+        return(precio*codigo);
     }
 }
